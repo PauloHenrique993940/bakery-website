@@ -1,8 +1,7 @@
 .explore-container {
-  max-width: 1100px;
-  /* Ajustado para caber as 3 fotos bem confortáveis */
+  max-width: 100%;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 80px 5%;
   text-align: center;
 }
 
@@ -17,7 +16,7 @@
 .filter-nav {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 50px;
   margin-bottom: 50px;
   border-bottom: 1px solid #f0f0f0;
   padding-bottom: 15px;

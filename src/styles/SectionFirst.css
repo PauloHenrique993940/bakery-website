@@ -1,5 +1,6 @@
 .section-First {
   width: 100%;
+  height: 100vh;
   background-image: url("../assets/Rectangle 45.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -29,9 +30,31 @@
   color: #5D5D5D;
 }
 
-.section-First button{
+.section-First button {
   background-color: #933C24;
   border: 1px solid #933C24;
   padding: 10px 15px;
   border-radius: 4px;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* efeito ao passar o mouse */
+.section-First button:hover {
+  background-color: #7a2f1c;
+  /* tom mais escuro */
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* efeito ao clicar */
+.section-First button:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
 }
