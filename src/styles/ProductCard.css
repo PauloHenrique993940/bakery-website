@@ -1,0 +1,28 @@
+
+.product-card {
+  background-color: #1a1a1a;
+  /* Fundo escuro */
+  border-radius: 4px;
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Espaçamento interno com Flexbox */
+.product-info-row,
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.add-button {
+  background-color: #a04a2e;
+  color: white;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 3px;
+  cursor: pointer;
+}

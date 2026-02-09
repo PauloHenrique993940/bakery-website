@@ -1,0 +1,14 @@
+header {
+  position: relative;
+  /* 🔴 ESSENCIAL */
+  width: 100%;
+
+  background-image: url('../assets/hero.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+  /* evita vazamentos */
+}
+

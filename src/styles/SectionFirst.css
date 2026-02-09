@@ -1,0 +1,37 @@
+.section-First {
+  width: 100%;
+  background-image: url("../assets/Rectangle 45.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: fill;
+  background-position: center;
+  /* centraliza */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.section-First h1{
+  color: #933C24;
+  font-size: 3rem;
+  width: 400px;
+  text-align: center;
+
+}
+
+.section-First p{
+  width: 300px;
+  text-align: center;
+  font-size: 24px;
+  color: #5D5D5D;
+}
+
+.section-First button{
+  background-color: #933C24;
+  border: 1px solid #933C24;
+  padding: 10px 15px;
+  border-radius: 4px;
+}

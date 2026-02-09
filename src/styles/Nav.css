@@ -1,0 +1,139 @@
+.menu {
+
+  /* fundo com imagem */
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  padding: 20px 60px;
+  gap: 100px;
+}
+
+/* LOGO */
+.menu img {
+  width: 60px;
+}
+
+/* MENU */
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+/* LINKS */
+.menu ul li a {
+  text-decoration: none;
+  color: #f2f2f2;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* hover dourado igual à imagem */
+.menu ul li a:hover {
+  color: #d4af37;
+}
+
+/* efeito leve de linha embaixo (opcional, mas fica top) */
+.menu ul li a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #d4af37;
+  transition: width 0.3s;
+  margin-top: 6px;
+}
+
+.menu ul li a:hover::after {
+  width: 100%;
+}
+
+/* Estilos para o botão de menu (hamburger) */
+.menu-toggle {
+  display: none; /* Esconde por padrão em telas maiores */
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1001; /* Garante que esteja acima do overlay */
+}
+
+.hamburger {
+  width: 25px;
+  height: 3px;
+  background-color: #f2f2f2;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Estilos para o botão de fechar (X) */
+.close-menu {
+  display: none; /* Esconde por padrão */
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #f2f2f2;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1002;
+}
+
+
+/* Media Query para telas menores */
+@media (max-width: 768px) {
+  .menu {
+    padding: 20px 30px;
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  .menu img {
+    width: 50px;
+  }
+
+  .menu-toggle {
+    display: flex; /* Mostra o hamburger em telas menores */
+  }
+
+  .menubar {
+    display: none; /* Esconde o menu normal */
+    flex-direction: column;
+    position: fixed; /* Fixa o menu para cobrir a tela */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Sombra escura de fundo */
+    padding-top: 80px; /* Espaço para o botão de fechar */
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 1000;
+    transform: translateX(100%); /* Começa fora da tela */
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .menubar.open {
+    display: flex; /* Mostra o menu quando 'open' */
+    transform: translateX(0); /* Desliza para dentro */
+  }
+
+  .menubar.open .close-menu {
+    display: block; /* Mostra o botão de fechar quando o menu está aberto */
+  }
+
+  .menu ul li {
+    margin: 15px 0;
+  }
+
+  .menu ul li a {
+    font-size: 18px;
+  }
+}
